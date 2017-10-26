@@ -20,47 +20,19 @@ import cn.bukaa.util.Info;
 
 public class Upload extends HttpServlet {
 
-	/**
-	 * Constructor of the object.
-	 */
 	public Upload() {
 		super();
 	}
-
-	/**
-	 * Destruction of the servlet. <br>
-	 */
 	public void destroy() {
-		super.destroy(); // Just puts "destroy" string in log
-		// Put your code here
+		super.destroy();
 	}
 
-	/**
-	 * The doGet method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to get.
-	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
-	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		this.doPost(request, response);
 	}
 
-	/**
-	 * The doPost method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to post.
-	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
-	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -70,7 +42,6 @@ public class Upload extends HttpServlet {
 			response.setHeader("Content-Disposition",   new   String(sb.toString()   
 			         .getBytes(),   "ISO8859-1"));
 		} catch (UnsupportedEncodingException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		 String filename = request.getParameter("filename");
@@ -78,7 +49,6 @@ public class Upload extends HttpServlet {
 		     try {
 				filename = new String(filename.getBytes("UTF-8"), "ISO8859-1");
 			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		 }
@@ -87,7 +57,6 @@ public class Upload extends HttpServlet {
 		           try {
 					filename = URLEncoder.encode(filename, "UTF-8");
 				} catch (UnsupportedEncodingException e) {
-					// TODO Auto-generated catch block
 					 
 				}
 		      }
@@ -123,14 +92,7 @@ public class Upload extends HttpServlet {
 			}finally{
 			}
 	}
-
-	/**
-	 * Initialization of the servlet. <br>
-	 *
-	 * @throws ServletException if an error occurs
-	 */
 	public void init() throws ServletException {
-		// Put your code here
 	}
 
 }

@@ -177,7 +177,6 @@ public class PageManager {
 					.append(parameter)
 					.append("' class='ls'>").append("首页")
 					.append("</a>");
-		// ////////////////////////#1157B7
 		buf.append("&nbsp;&nbsp;&nbsp;&nbsp;");
 
 		if (this.currentPage > 1) {
@@ -193,18 +192,6 @@ public class PageManager {
 
 		int currentSegment = this.currentPage % segment == 0 ? this.currentPage
 				/ segment : this.currentPage / segment + 1;
-
-		/*for (int i = 1; i <= this.pageNumber; i++) {
-			if (this.currentPage == i)
-				buf.append("<font color='red'>").append(i).append("</font>");
-
-			else
-				buf.append("<a href='").append(this.path).append(
-						"&currentPage=").append(i).append(parameter).append(
-						"' class='ls'>[").append(i).append(
-						"]</a>");
-		}*/
-
 		buf.append("&nbsp;&nbsp;");
 		if (this.currentPage < this.pageNumber) {
 			buf.append("<a href='").append(this.path).append("&currentPage=")
@@ -225,19 +212,6 @@ public class PageManager {
 					.append(this.pageNumber).append(parameter).append(
 							"' class='ls'>").append("末页")
 					.append("</a></font>&nbsp;&nbsp;");
-		// ////////////////////
-		// for (int i = 0; i < this.pageNumber; i++) {
-		// if (this.currentPage == i + 1) {
-		// buf.append("<font color=red>[" + (i + 1) + "]</font>").append(
-		// "&nbsp;");
-		// } else {
-		// buf.append("<a href='").append(this.path).append(
-		// "&currentPage=").append(i + 1).append(parameter)
-		// .append("' style='TEXT-DECORATION:none'>").append(
-		// "[" + (i + 1) + "]").append("</a>&nbsp;");
-		// }
-
-		// }
 		buf.append("<select onchange=\"javascript:window.location='").append(
 				this.path).append("&currentPage='+").append(
 				"this.options[this.selectedIndex].value").append(parameter)

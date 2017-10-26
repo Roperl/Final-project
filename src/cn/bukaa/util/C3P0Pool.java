@@ -20,7 +20,7 @@ public class C3P0Pool {
 			dataSource = new ComboPooledDataSource();
 			dataSource.setUser("root");
 			dataSource.setPassword("root");
-			dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/tjsqyygl?autoReconnect=true&useUnicode=true&characterEncoding=UTF8");
+			dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/oya?autoReconnect=true&useUnicode=true&characterEncoding=UTF8");
 			dataSource.setInitialPoolSize(2);
 			dataSource.setMinPoolSize(1);
 			dataSource.setMaxPoolSize(20);

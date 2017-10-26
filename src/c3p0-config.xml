@@ -2,9 +2,6 @@
 <c3p0-config>
 	<default-config> 
 		<property name="jdbcUrl">
-			<!-- <![CDATA[
-				jdbc:mysql://localhost:3306/tjsqyygl?useUnicode=true&characterEncoding=UTF8&useServerPrepStmts=true&prepStmtCacheSqlLimit=256&cachePrepStmts=true&prepStmtCacheSize=256&rewriteBatchedStatements=true
-			]]> -->
 			jdbc:mysql://localhost:3306/oya
 		</property>
 		<property name="driverClass">com.mysql.jdbc.Driver</property>

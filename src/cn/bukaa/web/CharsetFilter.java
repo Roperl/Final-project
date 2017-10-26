@@ -13,7 +13,6 @@ import javax.servlet.ServletResponse;
 public class CharsetFilter implements Filter {
 	private String encoding="UTF-8";
 	public void init(FilterConfig filterConfig) throws ServletException {
-		// TODO Auto-generated method stub
 		String encoding=filterConfig.getInitParameter("encoding");
 		if(encoding!=null)
 			this.encoding=encoding;

@@ -33,8 +33,7 @@ public class MainCtrl extends HttpServlet {
 	}
 
 	public void destroy() {
-		super.destroy(); // Just puts "destroy" string in log
-		// Put your code here
+		super.destroy(); 
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -58,7 +57,6 @@ public class MainCtrl extends HttpServlet {
 		try {
 			response.sendRedirect(url);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -249,7 +247,6 @@ public class MainCtrl extends HttpServlet {
 							// 通过Workbook的getSheet方法选择第一个工作簿（从0开始）
 							Sheet sheet = workbook.getSheet(0);
 							// 通过Sheet方法的getCell方法选择位置为C2的单元格（两个参数都从0开始）
-							// int empty = 0;
 							for (int i = 1; i < 1000; i++) {
 								Cell cell = null;
 								try {
@@ -512,7 +509,6 @@ public class MainCtrl extends HttpServlet {
 	}
 
 	public void init() throws ServletException {
-		// Put your code here
 	}
 
 }

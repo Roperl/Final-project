@@ -11,7 +11,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  * @author qdmmy6
  */
 public class JdbcUtils {
-	// 饿汉式
+	// 饿汉式单例模式
 	private static DataSource ds = new ComboPooledDataSource();
 	
 	/**

@@ -174,10 +174,8 @@ public class Info {
 	            }
 	            
 	            } catch (RowsExceededException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				} catch (WriteException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}    
 	             //下面开始添加单元格  
@@ -199,10 +197,8 @@ public class Info {
 		            
 		            i++;
 	            } catch (RowsExceededException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				} catch (WriteException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}    
 	            }    
@@ -582,7 +578,6 @@ public class Info {
 		 try {
 			str =  new String(str.getBytes("ISO-8859-1"),"utf-8");
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return str;
@@ -604,7 +599,7 @@ public class Info {
 
 	 
 	 /**
-		 *得到多少天之后之前的日期��
+		 *得到多少天之后之前的日期
 		 * @param String date
 		 * @param int day
 		 * @return
@@ -753,7 +748,6 @@ public class Info {
 	          sourceLowcase=subLowcase1+subLowcase2;
 	          source=sub1+sub2;
 	         }
-	         //System.out.println(start+" "+end);
 	        }
 	        return source;
 	   }

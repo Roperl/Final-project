@@ -33,7 +33,6 @@ public class StrUtil {
 		if(idSequence>20000)
 		  idSequence-=10000;
 		ret.append(String.valueOf(idSequence).substring(1));
-		//System.out.println("生成ID="+ret);
 		return ret.toString();
 	}
 	public static String generalFileName(String srcFileName) {

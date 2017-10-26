@@ -93,8 +93,6 @@ public class CommDAO
 	
      //InputStream in =  CommDAO.class.getClassLoader().getResourceAsStream("dbconnection.properties");
 
-	  
-	 
 	  // config.load(in);
 	  // System.out.println(config.get("dburl"));
 	  // in.close();
@@ -134,7 +132,6 @@ public class CommDAO
 			    rs.close();
 			    st.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			return list.get(0);
@@ -239,7 +236,7 @@ public class CommDAO
 			 str += "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> \n";
 			 str +=	"<script language=javascript>\n";
 			if(alert){
-			str+="alert('鎿嶄綔鎴愬姛');\n";
+			str+="alert('操作成功');\n";
 			}
 			if(reflush){
 				str+="parent.location=parent.location;\n";
@@ -253,7 +250,6 @@ public class CommDAO
 			try {
 			wrt = response.getWriter();
 			} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			}
 			wrt.write(str);
@@ -275,10 +271,8 @@ public class CommDAO
 				 st.close();
 					}
 				}
-				 
 				   
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} 
 		}
@@ -392,7 +386,7 @@ public class CommDAO
 			 str += "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n" ;
 			 str +=	"<script language=javascript>\n";
 			if(alert){
-			str+="alert('鎿嶄綔鎴愬姛');\n";
+			str+="alert('操作成功');\n";
 			}
 			if(reflush){
 				str+="parent.location=parent.location;\n";
@@ -404,10 +398,8 @@ public class CommDAO
 			
 			PrintWriter wrt = null;
 			try {
-				//request.get
 			wrt = response.getWriter();
 			} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			}
 			wrt.write(str);
@@ -445,7 +437,6 @@ public class CommDAO
 			}
 			    st.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return i;
@@ -465,7 +456,6 @@ public class CommDAO
 			}
 			    st.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return i;
@@ -478,7 +468,6 @@ public class CommDAO
 		    st.execute(sql);
 		    st.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -542,7 +531,6 @@ public class CommDAO
 		    rs.close();
 		    st.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			
 			if(sql.equals("show tables"))
 			list = select("select table_name from   INFORMATION_SCHEMA.tables");
@@ -581,7 +569,6 @@ public class CommDAO
 		    rs.close();
 		    st.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return list;
@@ -593,15 +580,10 @@ public class CommDAO
 		try {
 			conn.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
-	/**
-	 * 鎵ц涓�鏉℃煡璇ql,浠� List<hashmap> 鐨勫舰寮忚繑鍥炴煡璇㈢殑璁板綍锛岃褰曟潯鏁帮紝鍜屼粠绗嚑鏉″紑濮嬶紝鐢卞弬鏁板喅瀹氾紝涓昏鐢ㄤ簬缈婚〉
-	 * pageno 椤电爜  rowsize 姣忛〉鐨勬潯鏁�
-	 */
 	public List<HashMap> select(String sql, int pageno, int rowsize) {
 		List<HashMap> list=new ArrayList<HashMap>();
 		List<HashMap> mlist=new ArrayList<HashMap>();
@@ -626,10 +608,6 @@ public class CommDAO
 		
 		return mlist;
 	}
-	
-
-	
-	
 	public static void main(String[] args) { 
 	}
 }
